@@ -7,6 +7,7 @@
 </head>
 <body>
 
+<a href="https://cors-anywhere.herokuapp.com/" target="_blank">Click me First!</a>
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 <script>
   $(function (){
@@ -17,9 +18,9 @@
   function callAPI(){
     //var data  = {"username": "admin","password": "admin"};
     //var url = "https://localhost:7109/api/Account";
-    //var url="https://cors-anywhere.herokuapp.com/"+"https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=CWB-5229F6B0-6099-4E1E-A37B-37F1E2621B6D"
+    var url="https://cors-anywhere.herokuapp.com/"+"https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=CWB-5229F6B0-6099-4E1E-A37B-37F1E2621B6D"
 
-    var url="https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=CWB-5229F6B0-6099-4E1E-A37B-37F1E2621B6D"
+    //var url="https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=CWB-5229F6B0-6099-4E1E-A37B-37F1E2621B6D"
 
     //console.log(url); //for debug
     $.ajax({
