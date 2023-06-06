@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+  $(function (){
+    console.log("aaaa");
+    callAPI();
+  });
+
+  function callAPI(){
+    //var data  = {"username": "admin","password": "admin"};
+    //var url = "https://localhost:7109/api/Account";
+    //var url="https://cors-anywhere.herokuapp.com/"+"https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=CWB-5229F6B0-6099-4E1E-A37B-37F1E2621B6D"
+
+    var url="https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=CWB-5229F6B0-6099-4E1E-A37B-37F1E2621B6D"
+
+    //console.log(url); //for debug
+    $.ajax({
+      url: url,
+      type: "get",
+      contentType : 'application/json; charset=utf-8', // 要送到server的資料型態
+      //data : JSON.stringify(data),
+      //Type: Function(Anything data, String textStatus, jqXHR jqXHR)
+      success: function(data, textStatus, jqXHR) {
+        console.log(JSON.stringify(data));
+      },
+      //Type: Function(jqXHR jqXHR, String textStatus, String errorThrown)
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.log(jqXHR.status);  //HTTP CODE
+        console.log(JSON.stringify(jqXHR));
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
